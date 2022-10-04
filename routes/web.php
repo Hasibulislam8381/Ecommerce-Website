@@ -30,3 +30,14 @@ route::get('/redirect',[HomeController::class,'redirect']);
 route::get('/view_category',[AdminController::class,'view_category']);
 route::post('/add_category',[AdminController::class,'add_category']);
 route::get('/delete_category/{id}',[AdminController::class,'delete_category']);
+route::get('/add_product',[AdminController::class,'add_product']);
+route::post('/insert_product',[AdminController::class,'insert_product']);
+route::get('/view_product',[AdminController::class,'view_product']);
+route::get('/delete_product/{id}',[AdminController::class,'delete_product']);
+route::get('/update_product/{id}',[AdminController::class,'update_product']);
+route::post('/update_product_confirm/{id}',[AdminController::class,'update_product_confirm']);
+
+//User page (Home) controller
+
+route::get('/product_details/{id}',[HomeController::class,'product_details']);
+route::post('/add_cart/{id}',[HomeController::class,'add_cart']);
